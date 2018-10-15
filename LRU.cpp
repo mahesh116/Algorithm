@@ -109,7 +109,7 @@ string LRU<T1, T2>::getEntry(T1 key)
 	}
 
 	/* Extract the iterator to linked list where the key, value is stored */
-	std::list<std::pair<int, string>>::iterator iter_list = iter->second;
+	typename std::list<std::pair<T1, T2>>::iterator iter_list = iter->second;
 
 	/* Copy the value to local variable to be returned */
 	string result = iter_list->second;
